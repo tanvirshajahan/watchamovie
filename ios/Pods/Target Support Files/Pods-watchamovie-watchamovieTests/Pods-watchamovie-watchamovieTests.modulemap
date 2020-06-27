@@ -1,0 +1,6 @@
+module Pods_watchamovie_watchamovieTests {
+  umbrella header "Pods-watchamovie-watchamovieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

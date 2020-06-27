@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "858627221119",
+    "firebase_url": "https://movies-281612.firebaseio.com",
+    "project_id": "movies-281612",
+    "storage_bucket": "movies-281612.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:858627221119:android:d79dadde625388787ec14a",
+        "android_client_info": {
+          "package_name": "com.watchamovie"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "858627221119-v7hetf3o05lk7lfu108c1ai45equk162.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.watchamovie",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "858627221119-ha1530qbtjkcvreq5ricmn1m5vlq4246.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsYsePnnPFn4Wn0vPTbxZLUZ91hGcVTSU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "858627221119-ha1530qbtjkcvreq5ricmn1m5vlq4246.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "858627221119-801jgun8nju3aa9tane0llp3k5kiiail.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "org.reactjs.native.example.watchamovie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
