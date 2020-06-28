@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/fcsconnect/watchamovie/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h360dp-land-v13/values-h360dp-land-v13.xml",
+            "outputFile": "/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h360dp-land-v13/values-h360dp-land-v13.xml",
             "map": [
                 {
                     "source": "/Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7c9142c17550c92dab314dac75f37ca0/material-1.1.0/res/values-h360dp-land-v13/values-h360dp-land-v13.xml",

@@ -1,12 +1,12 @@
 import React from 'react';
 import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  Button,
-  Input
+    SafeAreaView,
+    StyleSheet,
+    ScrollView,
+    View,
+    Text,
+    Button,
+    Input
 } from 'react-native';
 
 export default class Dashboard extends React.Component{

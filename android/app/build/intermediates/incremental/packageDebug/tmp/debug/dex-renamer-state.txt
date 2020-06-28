@@ -1,4 +1,4 @@
-#Sun Jun 28 02:47:23 MYT 2020
-base.0=/Users/fcsconnect/watchamovie/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+#Sun Jun 28 17:04:14 MYT 2020
+base.0=/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/build/intermediates/dex/debug/mergeDexDebug/out/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

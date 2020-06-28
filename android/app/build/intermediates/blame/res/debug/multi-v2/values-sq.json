@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/fcsconnect/watchamovie/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml",
+            "outputFile": "/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sq/values-sq.xml",
             "map": [
                 {
                     "source": "/Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/97c22d750c6641662c8874e6a6a5851a/jetified-play-services-basement-17.0.0/res/values-sq/values.xml",

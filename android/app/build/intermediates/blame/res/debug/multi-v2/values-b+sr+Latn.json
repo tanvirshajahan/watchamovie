@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/fcsconnect/watchamovie/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
                     "source": "/Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/51c60a74c89e63786feb7a72e94c376c/core-1.1.0/res/values-b+sr+Latn/values-b+sr+Latn.xml",

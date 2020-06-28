@@ -55,7 +55,7 @@ signIn = async () => {
         const info = await GoogleSignin.signIn();
         // console.warn({userInfo: info});
         // setUserInfo(info);
-        this.props.navigation.navigate("dashboard")
+        this.props.navigation.navigate("Dashboard")
         return info;
     } catch (error) {
         if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -80,8 +80,7 @@ signIn = async () => {
 
 async googleSignIn(){
     // const userInfo = await GoogleSignin.signIn();
-    // const userInfo = await this.signIn();
-    this.props.navigation.navigate("Dashboard")
+    const userInfo = await this.signIn();
     // console.log('test',this)
 
     console.log(userInfo , ' success');
