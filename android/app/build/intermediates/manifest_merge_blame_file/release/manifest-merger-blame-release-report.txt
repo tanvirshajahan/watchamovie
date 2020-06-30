@@ -1,0 +1,206 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.watchamovie"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="16"
+8-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="28" />
+9-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:4:5-67
+11-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:4:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:24:5-79
+12-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:24:22-76
+13    <uses-permission android:name="android.permission.WAKE_LOCK" />
+13-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:25:5-68
+13-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:25:22-65
+14    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+14-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:26:5-110
+14-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:26:22-107
+15    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+15-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:26:5-82
+15-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:26:22-79
+16
+17    <application
+17-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:6:5-25:19
+18        android:name="com.watchamovie.MainApplication"
+18-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:7:7-38
+19        android:allowBackup="false"
+19-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:11:7-34
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.1.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/51c60a74c89e63786feb7a72e94c376c/core-1.1.0/AndroidManifest.xml:24:18-86
+21        android:icon="@mipmap/ic_launcher"
+21-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:9:7-41
+22        android:label="@string/app_name"
+22-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:8:7-39
+23        android:roundIcon="@mipmap/ic_launcher_round"
+23-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:10:7-52
+24        android:theme="@style/AppTheme" >
+24-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:12:7-38
+25        <activity
+25-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:13:7-23:18
+26            android:name="com.watchamovie.MainActivity"
+26-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:14:9-37
+27            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|uiMode"
+27-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:16:9-86
+28            android:label="@string/app_name"
+28-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:15:9-41
+29            android:launchMode="singleTask"
+29-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:17:9-40
+30            android:windowSoftInputMode="adjustResize" >
+30-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:18:9-51
+31            <intent-filter>
+31-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:19:9-22:25
+32                <action android:name="android.intent.action.MAIN" />
+32-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:20:13-65
+32-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:20:21-62
+33
+34                <category android:name="android.intent.category.LAUNCHER" />
+34-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:21:13-73
+34-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:21:23-70
+35            </intent-filter>
+36        </activity>
+37        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity" />
+37-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:24:7-84
+37-->/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/src/main/AndroidManifest.xml:24:17-81
+38
+39        <receiver
+39-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:29:9-33:20
+40            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+40-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:30:13-85
+41            android:enabled="true"
+41-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:31:13-35
+42            android:exported="false" >
+42-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:32:13-37
+43        </receiver>
+44        <receiver
+44-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:34:9-42:20
+45            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+45-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:35:13-100
+46            android:enabled="true"
+46-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:36:13-35
+47            android:exported="true"
+47-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:37:13-36
+48            android:permission="android.permission.INSTALL_PACKAGES" >
+48-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:38:13-69
+49            <intent-filter>
+49-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:39:13-41:29
+50                <action android:name="com.android.vending.INSTALL_REFERRER" />
+50-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:40:17-79
+50-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:40:25-76
+51            </intent-filter>
+52        </receiver>
+53
+54        <service
+54-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:44:9-47:40
+55            android:name="com.google.android.gms.measurement.AppMeasurementService"
+55-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:45:13-84
+56            android:enabled="true"
+56-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:46:13-35
+57            android:exported="false" />
+57-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:47:13-37
+58        <service
+58-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:48:9-52:72
+59            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+59-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:49:13-87
+60            android:enabled="true"
+60-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:50:13-35
+61            android:exported="false"
+61-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:51:13-37
+62            android:permission="android.permission.BIND_JOB_SERVICE" />
+62-->[com.google.android.gms:play-services-measurement:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/1a0d786327d5a1f0b54b49ca24576ae2/play-services-measurement-17.2.2/AndroidManifest.xml:52:13-69
+63        <service
+63-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/f214fc06310ca82def0b330804eead52/play-services-measurement-api-17.2.2/AndroidManifest.xml:27:9-33:19
+64            android:name="com.google.firebase.components.ComponentDiscoveryService"
+64-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/f214fc06310ca82def0b330804eead52/play-services-measurement-api-17.2.2/AndroidManifest.xml:28:13-84
+65            android:directBootAware="true"
+65-->[com.google.firebase:firebase-common:19.3.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a0adfb594dfd67e459ebf00918a7ad29/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+66            android:exported="false" >
+66-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/f214fc06310ca82def0b330804eead52/play-services-measurement-api-17.2.2/AndroidManifest.xml:29:13-37
+67            <meta-data
+67-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/f214fc06310ca82def0b330804eead52/play-services-measurement-api-17.2.2/AndroidManifest.xml:30:13-32:85
+68                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+68-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/f214fc06310ca82def0b330804eead52/play-services-measurement-api-17.2.2/AndroidManifest.xml:31:17-139
+69                android:value="com.google.firebase.components.ComponentRegistrar" />
+69-->[com.google.android.gms:play-services-measurement-api:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/f214fc06310ca82def0b330804eead52/play-services-measurement-api-17.2.2/AndroidManifest.xml:32:17-82
+70            <meta-data
+70-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:32:13-34:85
+71                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+71-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:33:17-96
+72                android:value="com.google.firebase.components.ComponentRegistrar" />
+72-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:34:17-82
+73        </service>
+74
+75        <activity
+75-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:23:9-27:75
+76            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+76-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:24:13-93
+77            android:excludeFromRecents="true"
+77-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:25:13-46
+78            android:exported="false"
+78-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:26:13-37
+79            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+79-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:27:13-72
+80        <!--
+81            Service handling Google Sign-In user revocation. For apps that do not integrate with
+82            Google Sign-In, this service will never be started.
+83        -->
+84        <service
+84-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:33:9-36:110
+85            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+85-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:34:13-89
+86            android:exported="true"
+86-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:35:13-36
+87            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+87-->[com.google.android.gms:play-services-auth:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/7e966e6b0545facb0f4b000449a25223/play-services-auth-17.0.0/AndroidManifest.xml:36:13-107
+88
+89        <receiver
+89-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:37:9-44:20
+90            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+90-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:38:13-78
+91            android:exported="true"
+91-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:39:13-36
+92            android:permission="com.google.android.c2dm.permission.SEND" >
+92-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:40:13-73
+93            <intent-filter>
+93-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:41:13-43:29
+94                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+94-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:42:17-81
+94-->[com.google.firebase:firebase-iid:20.0.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/92a670bf51bebe39724a746b92b732bf/firebase-iid-20.0.2/AndroidManifest.xml:42:25-78
+95            </intent-filter>
+96        </receiver>
+97
+98        <provider
+98-->[com.google.firebase:firebase-common:19.3.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a0adfb594dfd67e459ebf00918a7ad29/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+99            android:name="com.google.firebase.provider.FirebaseInitProvider"
+99-->[com.google.firebase:firebase-common:19.3.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a0adfb594dfd67e459ebf00918a7ad29/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+100            android:authorities="com.watchamovie.firebaseinitprovider"
+100-->[com.google.firebase:firebase-common:19.3.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a0adfb594dfd67e459ebf00918a7ad29/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+101            android:exported="false"
+101-->[com.google.firebase:firebase-common:19.3.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a0adfb594dfd67e459ebf00918a7ad29/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+102            android:initOrder="100" />
+102-->[com.google.firebase:firebase-common:19.3.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a0adfb594dfd67e459ebf00918a7ad29/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+103
+104        <activity
+104-->[com.google.android.gms:play-services-base:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+105            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+105-->[com.google.android.gms:play-services-base:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+106            android:exported="false"
+106-->[com.google.android.gms:play-services-base:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+107            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+107-->[com.google.android.gms:play-services-base:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a8808dfeda94c47fb6332865b0619b8e/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+108
+109        <meta-data
+109-->[com.google.android.gms:play-services-basement:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/97c22d750c6641662c8874e6a6a5851a/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+110            android:name="com.google.android.gms.version"
+110-->[com.google.android.gms:play-services-basement:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/97c22d750c6641662c8874e6a6a5851a/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+111            android:value="@integer/google_play_services_version" />
+111-->[com.google.android.gms:play-services-basement:17.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/97c22d750c6641662c8874e6a6a5851a/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+112    </application>
+113
+114</manifest>

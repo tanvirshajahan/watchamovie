@@ -1,0 +1,4 @@
+#Tue Jun 30 21:18:17 MYT 2020
+base.0=/Users/fcsconnect/Desktop/Portfolio/WatchAMovie/android/app/build/intermediates/dex/release/mergeDexRelease/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

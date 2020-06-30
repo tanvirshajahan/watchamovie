@@ -55,7 +55,7 @@ signIn = async () => {
         const info = await GoogleSignin.signIn();
         // console.warn({userInfo: info});
         // setUserInfo(info);
-        this.props.navigation.navigate("Dashboard")
+        this.props.navigation.navigate("App")
         return info;
     } catch (error) {
         if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -75,7 +75,6 @@ signIn = async () => {
         }
     }
 };
-
 
 
 async googleSignIn(){
@@ -102,8 +101,6 @@ async googleSignIn(){
         console.log(userInfo.idToken);
         //login to themovie db
         
-        // this.state.googleInfo = result;
-        // await this.Login('Bearer '+ result.idToken, result.refreshToken);
     }
     else
     {
@@ -115,7 +112,7 @@ async googleSignIn(){
         return(
         <View style={styles.container}>
             <Text style={styles.header}>Welcome to WatchAMovie</Text>
-            <Button title="Continue with Google" onPress={() => this.googleSignIn()}/>
+            <Button title="Login with Google" onPress={() => this.googleSignIn()}/>
         </View>
         
         )
