@@ -15,7 +15,6 @@ const persistConfig = {
     storage: AsyncStorage,
     // Whitelist (Save Specific Reducers)
     whitelist: [
-        "employeeDetailReducer",
         "userDetailReducer",
 
     ],

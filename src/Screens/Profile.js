@@ -6,8 +6,9 @@ import {
     StyleSheet,
     Button
 } from 'react-native';
+import {connect} from "react-redux";
 
-export default class Profile extends React.Component{
+class Profile extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -20,6 +21,9 @@ export default class Profile extends React.Component{
         return(
             <View style={styles.containerMain}>
                 <Button title={'Logout'} onPress={()=>{this.props.navigation.navigate('Auth')}}></Button>
+        <Text>{this.props.userDetails.name}</Text>
+        <Text>{this.props.userDetails.token}</Text>
+        <Text>{this.props.userDetails.profile_pic}</Text>
             </View>
         )
     }
@@ -33,4 +37,11 @@ const styles = StyleSheet.create({
         //alignItems: 'center',
         padding:10,
     },
-})           
+})     
+
+const mapStateToProps = (state) => {
+    return{
+        userDetails: state.userDetailReducer.userDetails
+    }
+}
+export default connect(mapStateToProps,null)(Profile)

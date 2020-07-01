@@ -25,7 +25,6 @@ import {
 } from '@react-native-community/google-signin';
 //redux component
 import {connect} from "react-redux"
-import {saveEmployeeDetails} from '../redux/Action/saveEmployeeDetails'
 import {saveUserDetails} from '../redux/Action/saveUserDetails'
 
 
@@ -55,7 +54,6 @@ signIn = async () => {
         const info = await GoogleSignin.signIn();
         // console.warn({userInfo: info});
         // setUserInfo(info);
-        this.props.navigation.navigate("App")
         return info;
     } catch (error) {
         if (error.code === statusCodes.SIGN_IN_CANCELLED) {
@@ -79,10 +77,15 @@ async googleSignIn(){
 
     if (userInfo)
     {
-        console.log(userInfo.idToken);
+        console.log(userInfo, ' test here mann');
         //login to themovie db
+        var userDetails = {};
+        userDetails.name = userInfo.user.name;
+        userDetails.token = userInfo.idToken;
+        userDetails.profile_pic = userInfo.user.photo;
+        this.props.reduxeSaveUserDetail(userDetails)
 
-        
+        this.props.navigation.navigate("App")
     }
     else
     {
@@ -99,19 +102,12 @@ async googleSignIn(){
             <Button
             title={'test'}
                 onPress={()=> {
-                    var employeeDetails = {};
-                        employeeDetails.name = 'testname';
-                        employeeDetails.schoolName = 'testschoolname';
-                        employeeDetails.companyName = 'testcompanyname';
-                        employeeDetails.dummydata = "khbdh123";
-                        this.props.reduxeSaveEmployeeDetail(employeeDetails)
                         var userDetails = {};
                         userDetails.name = 'ntanvir';
                         userDetails.token = '123123kkk';
                         userDetails.profile_pic = 'picture here';
                         this.props.reduxeSaveUserDetail(userDetails)
                 }}>
-
             </Button>
         </View>
         
@@ -138,7 +134,6 @@ const styles = StyleSheet.create({
 const mapDispatchToProps = (dispatch) => 
     {
         return{
-        reduxeSaveEmployeeDetail:(employeDetails) => dispatch(saveEmployeeDetails(employeDetails)),
         reduxeSaveUserDetail:(userDetails) => dispatch(saveUserDetails(userDetails))
         }
     }
