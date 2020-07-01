@@ -4,7 +4,7 @@ import {
     FlatList,
     Text,
     StyleSheet,
-    ScrollView
+    Button
 } from 'react-native';
 
 export default class Profile extends React.Component{
@@ -19,7 +19,7 @@ export default class Profile extends React.Component{
     render(){
         return(
             <View style={styles.containerMain}>
-                
+                <Button title={'Logout'} onPress={()=>{this.props.navigation.navigate('Auth')}}></Button>
             </View>
         )
     }

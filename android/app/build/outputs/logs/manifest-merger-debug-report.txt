@@ -14,6 +14,7 @@ MERGED from [:react-native-community_masked-view] /Users/fcsconnect/Desktop/Port
 MERGED from [:react-native-gesture-handler] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-gesture-handler/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-safe-area-context] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [:react-native-screens] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-vector-icons] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:2:1-11:12
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/99e7d9c402901b279e2ec422ad81034b/jetified-react-native-0.62.2/AndroidManifest.xml:2:1-13:12
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/682ef7e83c71e0ad469d6d221e784a94/firebase-analytics-17.2.2/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/a1d64627529d8d421c0b27e7fdd4a3e1/swiperefreshlayout-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -238,6 +239,8 @@ MERGED from [:react-native-safe-area-context] /Users/fcsconnect/Desktop/Portfoli
 MERGED from [:react-native-safe-area-context] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-safe-area-context/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:5:5-7:41
 MERGED from [:react-native-screens] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-screens] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-screens/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-vector-icons] /Users/fcsconnect/Desktop/Portfolio/WatchAMovie/node_modules/react-native-vector-icons/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/99e7d9c402901b279e2ec422ad81034b/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.facebook.react:react-native:0.62.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/99e7d9c402901b279e2ec422ad81034b/jetified-react-native-0.62.2/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-analytics:17.2.2] /Users/fcsconnect/.gradle/caches/transforms-2/files-2.1/682ef7e83c71e0ad469d6d221e784a94/firebase-analytics-17.2.2/AndroidManifest.xml:5:5-44

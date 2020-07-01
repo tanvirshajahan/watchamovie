@@ -11,8 +11,6 @@ import {MyText} from '../UI/MyText'
 import Loading from '../UI/Loading';
 import {apiCall} from '../API/ApiCall';
 import * as APIURL from '../API/API_URL';
-import { Icon } from 'react-native-elements'
-
 
 export default class Dashboard extends React.Component{
     constructor(props){

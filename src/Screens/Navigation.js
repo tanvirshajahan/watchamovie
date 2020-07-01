@@ -32,8 +32,8 @@ const Stack = createStackNavigator();
 const AppNavigator = () => (
     <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false,}}>
-            <Stack.Screen name="App" component={bottoNav}/> 
             <Stack.Screen name="Auth" component={Login}/> 
+            <Stack.Screen name="App" component={bottoNav}/> 
         </Stack.Navigator>  
     </NavigationContainer>
 );

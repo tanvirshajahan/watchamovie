@@ -23,8 +23,13 @@ import {
     GoogleSigninButton,
     statusCodes,
 } from '@react-native-community/google-signin';
+//redux component
+import {connect} from "react-redux"
+import {saveEmployeeDetails} from '../redux/Action/saveEmployeeDetails'
+import {saveUserDetails} from '../redux/Action/saveUserDetails'
 
-export default class Login extends React.Component{
+
+class Login extends React.Component{
 
 constructor(props){
     super(props)
@@ -44,11 +49,6 @@ constructor(props){
     });
 }
 
-  //android
-  //169837504288-qep4q36hsjc509hlp1fs8i9nebg71kc5.apps.googleusercontent.com
-  //ios
-  // 11255052070-5o19jaikscia9hv7jokkpbdnvsfbn29m.apps.googleusercontent.com
-
 signIn = async () => {
     try {
         await GoogleSignin.hasPlayServices();
@@ -59,47 +59,29 @@ signIn = async () => {
         return info;
     } catch (error) {
         if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-        console.log('failed 1')
         // user cancelled the login flow
         } else if (error.code === statusCodes.IN_PROGRESS) {
         // operation (e.g. sign in) is in progress already
-        console.log('failed 2')
 
         } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
         // play services not available or outdated
-        console.log('failed 3')
 
         } else {
-        console.log('failed 4', error)
         // some other error happened
         }
     }
 };
-
 
 async googleSignIn(){
     // const userInfo = await GoogleSignin.signIn();
     const userInfo = await this.signIn();
     // console.log('test',this)
 
-    console.log(userInfo , ' success');
-
-      // await GoogleSignin.logInAsync({
-      //   androidClientId:
-      //       "169837504288-qep4q36hsjc509hlp1fs8i9nebg71kc5.apps.googleusercontent.com",
-      //   // androidStandaloneAppClientId:
-      //   //     "357577265087-agprpvba7eoujgn5phbttjb5dfol0psh.apps.googleusercontent.com",
-      //   iosClientId:
-      //       "169837504288-oha8k991p0cuo1q2gdui5f1kfjplnmia.apps.googleusercontent.com",
-      //   // iosStandaloneAppClientId:
-      //   //     "357577265087-jipavt3d3jb9acmdkatt48oknq952lqb.apps.googleusercontent.com",
-      //   scopes: ["profile", "email", "openid"]
-      // })
-
     if (userInfo)
     {
         console.log(userInfo.idToken);
         //login to themovie db
+
         
     }
     else
@@ -113,6 +95,24 @@ async googleSignIn(){
         <View style={styles.container}>
             <Text style={styles.header}>Welcome to WatchAMovie</Text>
             <Button title="Login with Google" onPress={() => this.googleSignIn()}/>
+
+            <Button
+            title={'test'}
+                onPress={()=> {
+                    var employeeDetails = {};
+                        employeeDetails.name = 'testname';
+                        employeeDetails.schoolName = 'testschoolname';
+                        employeeDetails.companyName = 'testcompanyname';
+                        employeeDetails.dummydata = "khbdh123";
+                        this.props.reduxeSaveEmployeeDetail(employeeDetails)
+                        var userDetails = {};
+                        userDetails.name = 'ntanvir';
+                        userDetails.token = '123123kkk';
+                        userDetails.profile_pic = 'picture here';
+                        this.props.reduxeSaveUserDetail(userDetails)
+                }}>
+
+            </Button>
         </View>
         
         )
@@ -131,3 +131,18 @@ const styles = StyleSheet.create({
         fontSize:30,
     },
 });
+
+
+
+
+const mapDispatchToProps = (dispatch) => 
+    {
+        return{
+        reduxeSaveEmployeeDetail:(employeDetails) => dispatch(saveEmployeeDetails(employeDetails)),
+        reduxeSaveUserDetail:(userDetails) => dispatch(saveUserDetails(userDetails))
+        }
+    }
+    export default connect(
+        null,
+        mapDispatchToProps
+    )(Login); 
