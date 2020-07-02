@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Dashboard from "../Screens/Dashboard"
 import Login from "../Screens/Login";
 import Profile from "../Screens/Profile";
+import MovieDetailsScreen from "../Screens/MovieDetailsScreen";
 
 
 
@@ -13,6 +14,7 @@ const HomeStack = createStackNavigator();
 const HomeStackScreen = () => (
         <Stack.Navigator screenOptions={{headerShown: false,}}>
             <Stack.Screen name="Dashboard" component={Dashboard}/>
+            <Stack.Screen name="MovieDetailsScreen" component={MovieDetailsScreen}/>
         </Stack.Navigator>  
 )
 
@@ -32,8 +34,8 @@ const Stack = createStackNavigator();
 const AppNavigator = () => (
     <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false,}}>
-            <Stack.Screen name="Auth" component={Login}/> 
             <Stack.Screen name="App" component={bottoNav}/> 
+            <Stack.Screen name="Auth" component={Login}/> 
         </Stack.Navigator>  
     </NavigationContainer>
 );

@@ -97,18 +97,8 @@ async googleSignIn(){
         return(
         <View style={styles.container}>
             <Text style={styles.header}>Welcome to WatchAMovie</Text>
+            <Text style={styles.header}>{this.props.userDetails?'yes':'no'}</Text>
             <Button title="Login with Google" onPress={() => this.googleSignIn()}/>
-
-            <Button
-            title={'test'}
-                onPress={()=> {
-                        var userDetails = {};
-                        userDetails.name = 'ntanvir';
-                        userDetails.token = '123123kkk';
-                        userDetails.profile_pic = 'picture here';
-                        this.props.reduxeSaveUserDetail(userDetails)
-                }}>
-            </Button>
         </View>
         
         )
@@ -129,7 +119,14 @@ const styles = StyleSheet.create({
 });
 
 
+const mapStateToProps = (state) => 
+{
+    
 
+    return{
+        // userDetails:state.userDetailReducer.userDetails
+    }
+}
 
 const mapDispatchToProps = (dispatch) => 
     {
@@ -138,6 +135,6 @@ const mapDispatchToProps = (dispatch) =>
         }
     }
     export default connect(
-        null,
+        mapStateToProps,
         mapDispatchToProps
     )(Login); 

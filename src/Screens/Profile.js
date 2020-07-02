@@ -7,6 +7,8 @@ import {
     Button
 } from 'react-native';
 import {connect} from "react-redux";
+import {logout} from '../redux/Action/saveUserDetails'
+
 
 class Profile extends React.Component{
     constructor(props){
@@ -20,7 +22,9 @@ class Profile extends React.Component{
     render(){
         return(
             <View style={styles.containerMain}>
-                <Button title={'Logout'} onPress={()=>{this.props.navigation.navigate('Auth')}}></Button>
+                <Button title={'Logout'} onPress={()=>{
+                    this.props.reduxeLogout()
+                    this.props.navigation.navigate('Auth')}}></Button>
         <Text>{this.props.userDetails.name}</Text>
         <Text>{this.props.userDetails.token}</Text>
         <Text>{this.props.userDetails.profile_pic}</Text>
@@ -39,9 +43,19 @@ const styles = StyleSheet.create({
     },
 })     
 
+const mapDispatchToProps = (dispatch) => 
+    {
+        return{
+            reduxeLogout:(userDetails) => dispatch(logout(userDetails))
+        }
+    }
 const mapStateToProps = (state) => {
     return{
-        userDetails: state.userDetailReducer.userDetails
+        userDetails:state.userDetailReducer.userDetails
+
+
     }
 }
-export default connect(mapStateToProps,null)(Profile)
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps)(Profile)
