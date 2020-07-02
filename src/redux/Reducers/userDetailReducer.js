@@ -3,7 +3,8 @@ const initialState =
     userDetails: {
         name:"",
         token:"",
-        profile_pic:""
+        profile_pic:"",
+        genre: "",
     }
 };
 

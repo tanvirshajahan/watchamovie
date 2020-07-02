@@ -16,8 +16,8 @@ import {
     Button,
     Input
 } from 'react-native';
-
-
+import * as APIURL from '../API/API_URL';
+import {apiCall} from '../API/ApiCall';
 import {
     GoogleSignin,
     GoogleSigninButton,
@@ -37,6 +37,7 @@ constructor(props){
         signedIn: false, 
         name: "", 
         photoUrl: "",
+        genre:"",
     }
     GoogleSignin.configure({
         webClientId: '858627221119-ha1530qbtjkcvreq5ricmn1m5vlq4246.apps.googleusercontent.com', // client ID of type WEB for your server(needed to verify user ID and offline access)
@@ -78,11 +79,28 @@ async googleSignIn(){
     if (userInfo)
     {
         console.log(userInfo, ' test here mann');
+        let URLGENRE = APIURL.GETGENRE+'?'+APIURL.APIKEY;
+        const getGenre = await apiCall.performCall(URLGENRE,null); 
+        let dataGenre;
+        let statusMovie = await getGenre.status;
+        if(statusMovie == 200)
+        {
+            try{
+                this.setState({loading:false})
+                dataGenre = await getGenre.json();
+                dataGenre = dataGenre
+                this.state.genre = dataGenre;
+                console.log('result genre', this.state.genre)
+            }catch{}
+        }
+
         //login to themovie db
         var userDetails = {};
         userDetails.name = userInfo.user.name;
         userDetails.token = userInfo.idToken;
         userDetails.profile_pic = userInfo.user.photo;
+        userDetails.genre = this.state.genre;
+
         this.props.reduxeSaveUserDetail(userDetails)
 
         this.props.navigation.navigate("App")

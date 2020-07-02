@@ -44,7 +44,6 @@ export default class Dashboard extends React.Component{
         let statusTV = await responseTV.status;
         let statusPeople = await responsePeople.status;
 
-
         // console.log(status, 'headers')
         if(statusMovie == 200 && statusTV == 200 && statusPeople == 200 )
         {
@@ -77,7 +76,7 @@ export default class Dashboard extends React.Component{
                         <View style={styles.discoverContainer}>
                             <View style={styles.HeaderContainer}>
                                 <Text style={styles.Header}>Discover Movies</Text>
-                                <Text style={{color:'#fff'}} onPress={() =>this.props.navigation.navigate('')}>See All</Text>
+                                <Text style={{color:'#fff'}} onPress={() =>this.props.navigation.navigate('MovieListScreen')}>See All</Text>
                             </View>
                             <FlatList
                                 keyExtractor={(item, index) => index.toString()}
@@ -171,6 +170,9 @@ const ListContent = (item) => {
                     otherParam: params,
                 });
             }else if (item.type === 'people'){
+                item.props.navigation.navigate('ActorDetailsScreen', {
+                    otherParam: params,
+                });
 
             }else if (item.type === 'movie'){
                 item.props.navigation.navigate('MovieDetailsScreen', {

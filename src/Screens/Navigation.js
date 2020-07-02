@@ -7,6 +7,8 @@ import Dashboard from "../Screens/Dashboard"
 import Login from "../Screens/Login";
 import Profile from "../Screens/Profile";
 import MovieDetailsScreen from "../Screens/MovieDetailsScreen";
+import ActorDetailsScreen from "../Screens/PeopleDetailsScreen";
+import MovieListScreen from "../Screens/MovieListScreen";
 
 
 
@@ -15,6 +17,8 @@ const HomeStackScreen = () => (
         <Stack.Navigator screenOptions={{headerShown: false,}}>
             <Stack.Screen name="Dashboard" component={Dashboard}/>
             <Stack.Screen name="MovieDetailsScreen" component={MovieDetailsScreen}/>
+            <Stack.Screen name="ActorDetailsScreen" component={ActorDetailsScreen}/>
+            <Stack.Screen name="MovieListScreen" component={MovieListScreen}/>
         </Stack.Navigator>  
 )
 
@@ -34,6 +38,7 @@ const Stack = createStackNavigator();
 const AppNavigator = () => (
     <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false,}}>
+            {/* <Stack.Screen name="Auth" component={Login}/>  */}
             <Stack.Screen name="App" component={bottoNav}/> 
             <Stack.Screen name="Auth" component={Login}/> 
         </Stack.Navigator>  

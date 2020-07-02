@@ -8,6 +8,9 @@ import * as APIURL from '../API/API_URL';
 import {apiCall} from '../API/ApiCall';
 import {MyText} from '../UI/MyText'
 import { ScrollView, FlatList } from 'react-native-gesture-handler';
+import Loading from '../UI/Loading';
+import {connect} from "react-redux";
+
 
 
 class MovieDetailsScreen extends React.Component{
@@ -17,21 +20,23 @@ class MovieDetailsScreen extends React.Component{
             MovieId : this.props.route.params.otherParam[0].id,
             moviePic : this.props.route.params.otherParam[0].pic,
             movieDetails: '',
+            genre: '',
+            
         }
         this.getMovieDetails = this.getMovieDetails.bind(this);
-
+        // this.getGenre = this.getGenre.bind(this);
     }
 
     async componentDidMount() {
-        await this.getMovieDetails()
+        await this.getMovieDetails()        
+        this.state.genre = this.props.userDetails.genre.genres;
         this.forceUpdate();
-
     }
     
     async getMovieDetails(){
-        let URLPEOPLE = APIURL.MOVIE_DETAILS+this.state.MovieId+'?'+APIURL.APIKEY;
+        let URLMOVIE= APIURL.MOVIE_DETAILS+this.state.MovieId+'?'+APIURL.APIKEY;
 
-        let responseMovie = await apiCall.performCall(URLPEOPLE,null);
+        let responseMovie = await apiCall.performCall(URLMOVIE,null);
         let dataMovie;
         let statusMovie = await responseMovie.status;
         if(statusMovie == 200)
@@ -41,7 +46,6 @@ class MovieDetailsScreen extends React.Component{
                 dataMovie = await responseMovie.json();
                 dataMovie = dataMovie
                 this.state.movieDetails = dataMovie;
-                console.log('result', this.state.movieDetails)
             }catch{}
         }
     }
@@ -57,7 +61,6 @@ class MovieDetailsScreen extends React.Component{
 
     render(){
 
-        console.log('test',this.state.moviePic)
         const pic = this.state.moviePic
         const {backdrop_path ,genres,original_title,popularity,production_companies,release_date,title,vote_average,vote_count,overview,adult,runtime} = this.state.movieDetails
         const date = release_date+'';
@@ -80,11 +83,11 @@ class MovieDetailsScreen extends React.Component{
                                     }}
                                 />
                                     <FlatList
-                                    style={{alignSelf: 'center'}}
+                                        style={{alignSelf: 'center'}}
                                         keyExtractor={(item, index) => index.toString()}
                                         data={genres}
                                         horizontal
-                                        renderItem={({ item }) => 
+                                        renderItem={({ item,index }) => 
                                             <Genre props={this.props} item = {item} /> }
                                         keyExtractor={item => item.id}
                                     />
@@ -150,17 +153,21 @@ const styles = StyleSheet.create({
     },
 })     
 
-const Genre = (item) => {
-    let image ='';
-    let title ='';
-    let release_date ='';
-    let rating ='';
-    let id ='';
-
+const Genre = (value) => {
+    const { item } = value;
     return(
         <View style={{margin:10, borderRadius:10, borderWidth:2, borderColor: '#5B5B5B', height:30, paddingHorizontal:10}}>
-            <MyText>test</MyText>
+            <MyText>{item.name}</MyText>
         </View>   
     )
 }
-export default MovieDetailsScreen
+
+const mapStateToProps = (state) => {
+    return{
+        userDetails:state.userDetailReducer.userDetails,
+    }
+}
+
+export default connect(
+    mapStateToProps,
+    null)(MovieDetailsScreen)

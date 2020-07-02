@@ -7,7 +7,8 @@ export const saveUserDetails = (userDetails) =>(
         userDetails:{
             name:userDetails.name,
             token:userDetails.token,
-            profile_pic:userDetails.profile_pic
+            profile_pic:userDetails.profile_pic,
+            genre:userDetails.genre
         }
     });
     
