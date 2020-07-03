@@ -1,13 +1,15 @@
 import React from 'react';
 import {
     View,
-    FlatList,
-    Text,
+    Alert,
     StyleSheet,
-    Button
+    Image
 } from 'react-native';
 import {connect} from "react-redux";
 import {logout} from '../redux/Action/saveUserDetails'
+import { MyText } from '../UI/MyText';
+import { Button } from 'native-base';
+
 
 
 class Profile extends React.Component{
@@ -18,16 +20,48 @@ class Profile extends React.Component{
         }
 
     }
+    logout(){
+        Alert.alert(
+            "Watch a Movie",
+            "Are you sure want to Logout?",
+            [
+                {
+                    text: "No",
+                    onPress: () => console.log("Cancel Pressed"),
+                    style: "destructive"
+    
+                },
+                { 
+                    text: "Yes", 
+                    onPress: () => {
+                        this.props.reduxeLogout()
+                        this.props.navigation.navigate('Auth')
+                    },
+                    style: "cancel"
+                }
+                ],
+                { cancelable: false }
+            );
+    }
 
     render(){
+        console.log(this.props.userDetails.profile_pic)
         return(
             <View style={styles.containerMain}>
-                <Button title={'Logout'} onPress={()=>{
-                    this.props.reduxeLogout()
-                    this.props.navigation.navigate('Auth')}}></Button>
-        <Text>{this.props.userDetails.name}</Text>
-        <Text>{this.props.userDetails.token}</Text>
-        <Text>{this.props.userDetails.profile_pic}</Text>
+                <Image
+                    style={styles.logo}
+                    resizeMode = 'contain'
+                    source={{
+                        uri:
+                        this.props.userDetails.profile_pic,
+                    }}
+                />      
+            <MyText style={{margin:20,fontSize: 20}}>{this.props.userDetails.name}</MyText>
+                <Button  primary style={{alignSelf: 'center' }} title={'Logout'} onPress={()=>{
+                    this.logout()
+                    }}>
+                    <MyText style={styles.Text} >Logout</MyText>
+                </Button>
             </View>
         )
     }
@@ -36,11 +70,29 @@ class Profile extends React.Component{
 const styles = StyleSheet.create({
     containerMain:{
         flex:1,
+        alignItems: 'center',
+        justifyContent: 'center',
         paddingTop:50,
-        backgroundColor:'#fff',
+        backgroundColor:'#202020',
         //alignItems: 'center',
         padding:10,
     },
+    logo: {
+        width:200,
+        alignSelf: 'center',
+        height:200,
+        borderRadius:140,
+        // margin:10,
+        marginBottom:10,
+    },
+    Text: {
+        alignSelf: 'center',
+        textAlign: 'center',
+        alignContent: 'center',
+    },
+    Button: {
+        alignSelf: 'center',       
+    }
 })     
 
 const mapDispatchToProps = (dispatch) => 

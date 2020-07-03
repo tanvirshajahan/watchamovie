@@ -8,13 +8,11 @@
 
 import React from 'react';
 import {
-    SafeAreaView,
+    Image,
     StyleSheet,
-    ScrollView,
     View,
     Text,
-    Button,
-    Input
+    ImageBackground
 } from 'react-native';
 import * as APIURL from '../API/API_URL';
 import {apiCall} from '../API/ApiCall';
@@ -113,15 +111,20 @@ async googleSignIn(){
 }
     render(){
         return(
-        <View style={styles.container}>
-            <Text style={styles.header}>Welcome to WatchAMovie</Text>
-            <Text style={styles.header}>{this.props.userDetails?'yes':'no'}</Text>
-            <Button title="Login with Google" onPress={() => this.googleSignIn()}/>
-        </View>
-        
+        <ImageBackground  source={require('../image/background.jpg')} style={{width: '100%', height: '100%'}}  >
+            <View style={styles.container}>
+                <Image
+                        style={styles.logo}
+                        resizeMode = 'contain'
+                            source={require('../image/profile.png')}
+                    />
+                <Text style={styles.header}>Welcome to WatchAMovie</Text>
+                <GoogleSigninButton style={{alignSelf: 'center'}} onPress={() => this.googleSignIn()}/>
+            </View>
+        </ImageBackground>
         )
     }
-    }
+}
 
 const styles = StyleSheet.create({
     container: {
@@ -134,6 +137,11 @@ const styles = StyleSheet.create({
         marginBottom:100,
         fontSize:30,
     },
+    logo: {
+        width:200,
+        height:200,
+        alignSelf: 'center'
+    }
 });
 
 

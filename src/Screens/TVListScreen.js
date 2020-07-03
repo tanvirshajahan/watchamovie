@@ -16,7 +16,7 @@ import {getGenre} from '../helper/helper';
 
 
 
-class MovieListScreen extends React.Component{
+class TVListScreen extends React.Component{
     constructor(props){
         super(props)
         this.state = {
@@ -51,7 +51,7 @@ class MovieListScreen extends React.Component{
     }
     
     async getMovieList(){
-        let URLMOVIE = APIURL.MOVIE+'?'+APIURL.APIKEY+'&sort_by=popularity.desc'+'&page='+this.state.incremental;
+        let URLMOVIE = APIURL.TV+'?'+APIURL.APIKEY+'&sort_by=popularity.desc'+'&page='+this.state.incremental;
         let responseMovie = await apiCall.performCall(URLMOVIE,null);       
         let dataMovie;
         let statusMovie = await responseMovie.status;
@@ -68,7 +68,6 @@ class MovieListScreen extends React.Component{
 
     renderFooter() {
         return (
-        //Footer View with Load More button
         <View style={styles.footer}>
             {this.state.fetching_from_server ? (
                 <Loading color="white" style={{ marginLeft: 8 }} />
@@ -85,9 +84,8 @@ class MovieListScreen extends React.Component{
                 {this.state.loading?(
                     <Loading />
                 ):(
-                    // <ScrollView style={{flex:1}}>
                             <View style={{flex:1, height:height}}>
-                                <MyText numberOfLines={2} style={styles.Header}>Movie Collection</MyText>
+                                <MyText numberOfLines={2} style={styles.Header}>TV Collection</MyText>
                                 <FlatList
                                     style={{ width: '100%',height:10}}
                                     data={this.state.movieList}
@@ -100,7 +98,6 @@ class MovieListScreen extends React.Component{
                                     onMomentumScrollBegin={() => { this.onEndReachedCalledDuringMomentum = false; }}
                                     />
                         </View>
-                    // </ScrollView>
                 )}
             </View>
         )
@@ -135,7 +132,7 @@ const styles = StyleSheet.create({
 
 const ListItem = (value) => {
     const { item,index ,props} = value;
-    const {original_title,poster_path,genre_ids,id} = item
+    const {name,poster_path,genre_ids,id} = item
     const pic =  APIURL.IMAGE+poster_path;
     
     let listGenre = getGenre(genre_ids,props.userDetails.genre)
@@ -160,7 +157,7 @@ const ListItem = (value) => {
                         }}
                     />        
                     <View style={{flex:1,flexDirection:'column'}}> 
-                        <MyText numberOfLines={2} style={{flex:1}}>{original_title}</MyText>
+                        <MyText numberOfLines={2} style={{flex:1}}>{name}</MyText>
                         <FlatList
                             // style={{alignSelf: 'center'}}
                             keyExtractor={(item, index) => index.toString()}
@@ -174,12 +171,12 @@ const ListItem = (value) => {
                 </View>
             </View>   
         </TouchableOpacity>
-        
     )
 }
 
 const Genre = (value) => {
     const { item } = value;
+    console.log(item)
     return(
         <View style={{ borderRadius:10, borderWidth:2, padding:2, borderColor: '#5B5B5B', height:30, paddingHorizontal:10}}>
             <MyText>{item}</MyText>
@@ -195,4 +192,4 @@ const mapStateToProps = (state) => {
 
 export default connect(
     mapStateToProps,
-    null)(MovieListScreen)
+    null)(TVListScreen)

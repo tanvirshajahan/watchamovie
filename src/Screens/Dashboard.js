@@ -5,7 +5,8 @@ import {
     Text,
     StyleSheet,
     ScrollView,
-    Image
+    Image,
+    Platform
 } from 'react-native';
 import {MyText} from '../UI/MyText'
 import Loading from '../UI/Loading';
@@ -68,7 +69,7 @@ export default class Dashboard extends React.Component{
     }
     render(){
         return(
-            <View style={styles.containerMain}>
+            <View style={Platform.OS=='android'? styles.containerMain2:styles.containerMain}>
                 {this.state.loading?(
                     <Loading />
                 ):(
@@ -91,7 +92,7 @@ export default class Dashboard extends React.Component{
                         <View style={styles.discoverContainer}>
                             <View style={styles.HeaderContainer}>
                                 <Text style={styles.Header}>Discover TV Show</Text>
-                                <Text style={{color:'#fff'}} onPress={() =>this.props.navigation.navigate('')}>See All</Text>
+                                <Text style={{color:'#fff'}} onPress={() =>this.props.navigation.navigate('TVListScreen')}>See All</Text>
                             </View>
                             <FlatList
                                 keyExtractor={(item, index) => index.toString()}
@@ -106,7 +107,7 @@ export default class Dashboard extends React.Component{
                         <View style={styles.discoverContainer}>
                             <View style={styles.HeaderContainer}>
                                 <Text style={styles.Header}>Discover People</Text>
-                                <Text style={{color:'#fff'}} onPress={() =>this.props.navigation.navigate('')}>See All</Text>
+                                {/* <Text style={{color:'#fff'}} onPress={() =>this.props.navigation.navigate('')}>See All</Text> */}
                             </View>
                             <FlatList
                                 keyExtractor={(item, index) => index.toString()}
@@ -221,6 +222,13 @@ const styles = StyleSheet.create({
     containerMain:{
         flex:1,
         paddingTop:50,
+        backgroundColor:'#202020',
+        //alignItems: 'center',
+        padding:10,
+    },
+    containerMain2:{
+        flex:1,
+        paddingTop:20,
         backgroundColor:'#202020',
         //alignItems: 'center',
         padding:10,

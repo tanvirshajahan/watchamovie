@@ -17,6 +17,7 @@ class MovieDetailsScreen extends React.Component{
     constructor(props){
         super(props)
         this.state = {
+            loading: true,
             MovieId : this.props.route.params.otherParam[0].id,
             moviePic : this.props.route.params.otherParam[0].pic,
             movieDetails: '',
@@ -24,7 +25,6 @@ class MovieDetailsScreen extends React.Component{
             
         }
         this.getMovieDetails = this.getMovieDetails.bind(this);
-        // this.getGenre = this.getGenre.bind(this);
     }
 
     async componentDidMount() {

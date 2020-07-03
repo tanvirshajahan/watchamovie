@@ -13,6 +13,7 @@ import { store, persistor } from './src/redux/Store/store';
 
 // React Native: App
 export default App = () => {
+  console.disableYellowBox = true;
   return (
     // Redux: Global Store
     <Provider store={store}>

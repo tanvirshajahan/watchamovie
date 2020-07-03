@@ -9,6 +9,7 @@ import Profile from "../Screens/Profile";
 import MovieDetailsScreen from "../Screens/MovieDetailsScreen";
 import ActorDetailsScreen from "../Screens/PeopleDetailsScreen";
 import MovieListScreen from "../Screens/MovieListScreen";
+import TVListScreen from "../Screens/TVListScreen";
 
 
 
@@ -19,6 +20,7 @@ const HomeStackScreen = () => (
             <Stack.Screen name="MovieDetailsScreen" component={MovieDetailsScreen}/>
             <Stack.Screen name="ActorDetailsScreen" component={ActorDetailsScreen}/>
             <Stack.Screen name="MovieListScreen" component={MovieListScreen}/>
+            <Stack.Screen name="TVListScreen" component={TVListScreen}/>
         </Stack.Navigator>  
 )
 
@@ -38,9 +40,8 @@ const Stack = createStackNavigator();
 const AppNavigator = () => (
     <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false,}}>
-            {/* <Stack.Screen name="Auth" component={Login}/>  */}
-            <Stack.Screen name="App" component={bottoNav}/> 
             <Stack.Screen name="Auth" component={Login}/> 
+            <Stack.Screen name="App" component={bottoNav}/>  
         </Stack.Navigator>  
     </NavigationContainer>
 );
