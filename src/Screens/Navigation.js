@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import Dashboard from "../Screens/Dashboard"
 import Login from "../Screens/Login";
+// import LoginWithGoogle from "../Screens/LoginWithGoogle";
 import Profile from "../Screens/Profile";
 import MovieDetailsScreen from "../Screens/MovieDetailsScreen";
 import ActorDetailsScreen from "../Screens/PeopleDetailsScreen";
