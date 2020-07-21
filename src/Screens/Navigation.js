@@ -1,10 +1,24 @@
 import React from 'react';
+import {
+    StyleSheet,
+    Platform,
+    View,
+    Text,
+    Image,
+    TouchableOpacity,
+    YellowBox,
+    Dimensions,
+    Button,
+  } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+
 
 import Dashboard from "../Screens/Dashboard"
 import Login from "../Screens/Login";
+import {DrawerContent} from "../Screens/DrawerContent";
 // import LoginWithGoogle from "../Screens/LoginWithGoogle";
 import Profile from "../Screens/Profile";
 import MovieDetailsScreen from "../Screens/MovieDetailsScreen";
@@ -25,6 +39,13 @@ const HomeStackScreen = () => (
         </Stack.Navigator>  
 )
 
+const Drawer = createDrawerNavigator();
+const DrawerNav = () => (
+        <Drawer.Navigator drawerContent={props => <DrawerContent {...props}/> } >
+            <Drawer.Screen name="Home" component={Profile} />
+        </Drawer.Navigator>
+)
+
 
 const Tab = createBottomTabNavigator();
 const bottoNav = () => (
@@ -41,8 +62,8 @@ const Stack = createStackNavigator();
 const AppNavigator = () => (
     <NavigationContainer>
         <Stack.Navigator screenOptions={{headerShown: false,}}>
-            <Stack.Screen name="Auth" component={Login}/> 
             <Stack.Screen name="App" component={bottoNav}/>  
+            <Stack.Screen name="Auth" component={Login}/> 
         </Stack.Navigator>  
     </NavigationContainer>
 );
